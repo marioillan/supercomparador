@@ -47,7 +47,8 @@ nav ul {
 
 nav ul li a{
 
-  color: #5c5dc4;
+  color: #32919d;
+  transition: font-size 0.3s;
 
 }
 
@@ -61,6 +62,20 @@ nav ul li a{
 
   display: flex;
   flex-direction: column;
+  
+
+}
+
+.inicio-sesion input{
+
+  margin: 5px;
+
+}
+
+.inicio-sesion button{
+
+  margin: 5px;
+  border-radius: 4px;
 
 }
 
@@ -70,20 +85,39 @@ nav ul li a{
   font-weight: bold;
   cursor: pointer;
   border: none;
-  background-color: #333;
+  background-color: #787c88;
   color: #fff;
+  border-radius: 4px;
+}
+
+.boton-usuario a{
+  color: #fff;
+  text-decoration: none;
+
 }
 
 .boton-usuario:hover {
-  background-color: #fff;
-  color: #5c5dc4;
+  background-color: #4ab51f;
+  color: #ffffff;
 
 }
 
+nav ul li a:hover{
+
+  font-size: 22px;
+
+}
 
 input {
   padding: 4px 8px;
 }
+
+.boton-buscar{
+
+  cursor: pointer;
+  font-weight: bold;
+}
+
 
 footer{
 

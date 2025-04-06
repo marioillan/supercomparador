@@ -3,8 +3,14 @@
 main{
 
   height: 500px;
-  background-color: black;
+  background-color: #32919d;
 
+
+}
+
+main h2{
+
+  color: #fff;
 
 }
 
@@ -31,6 +37,8 @@ form input[name="busqueda"] {
   color: white;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
   transition: background-color 0.3s;
 }
 
