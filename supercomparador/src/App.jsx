@@ -76,14 +76,14 @@ function App() {
             <button type="submit" className='boton-buscar'>Buscar</button>
           </form>
         </section>
-        {mostrarResultados && (
+        
         <section className='lista-productos'>
           <ul>
             {productos.map((producto, index) => (
               <li key={index} className='producto-caja'>
                 <img src={producto.imagen_url} alt={producto.nombre} className='imagen-producto' />
                 <h3>{producto.nombre}</h3>
-                <p>{producto.categoria}</p>
+                <p>Categoría:{producto.categoria}</p>
               </li>
             ))}
           </ul>
