@@ -7,6 +7,7 @@ function App() {
   
   const [busqueda, setBusqueda] = useState('');
   const [productos, setProductos] = useState([]);
+  const [mostrarResultados, setMostrarResultados] = useState(false);
 
   const buscar = async (e) => {
     e.preventDefault();
@@ -22,6 +23,7 @@ function App() {
       if (error) throw error;
   
       setProductos(data);
+      setMostrarResultados(true);
     } catch (error) {
       console.error('Error al buscar productos:', error);
     }
@@ -74,6 +76,7 @@ function App() {
             <button type="submit" className='boton-buscar'>Buscar</button>
           </form>
         </section>
+        {mostrarResultados && (
         <section className='lista-productos'>
           <ul>
             {productos.map((producto, index) => (
