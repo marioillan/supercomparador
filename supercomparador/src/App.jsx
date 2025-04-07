@@ -76,22 +76,23 @@ function App() {
             <button type="submit" className='boton-buscar'>Buscar</button>
           </form>
         </section>
-        
-        <section className='lista-productos'>
-          <ul>
-            {productos.map((producto, index) => (
-              <li key={index} className='producto-caja'>
-                <img src={producto.imagen_url} alt={producto.nombre} className='imagen-producto' />
-                <h3>{producto.nombre}</h3>
-                <p>Categoría:{producto.categoria}</p>
-              </li>
-            ))}
-          </ul>
+        {mostrarResultados && (
+          <section className='lista-productos'>
+            <ul>
+              {productos.map((producto, index) => (
+                <li key={index} className='producto-caja'>
+                  <img src={producto.imagen_url} alt={producto.nombre} className='imagen-producto' />
+                  <h3>{producto.nombre}</h3>
+                  <p>Categoría:{producto.categoria}</p>
+                </li>
+              ))}
+            </ul>
 
-          {productos.length === 0 && busqueda !== '' && (
-            <p>No se encontraron productos relacionados.</p>
-          )}
-        </section>
+            {productos.length === 0 && busqueda !== '' && (
+              <p>No se encontraron productos relacionados.</p>
+            )}
+          </section>
+        )} 
 
       </main>
 
