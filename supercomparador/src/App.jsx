@@ -103,7 +103,7 @@ function App() {
         <p className='proyecto-footer'>PROYECTO SUPER COMPARADOR 2025 ISI</p>
         <h4>Integrantes:</h4>
         <p>Mario Illán Valero</p>
-        <p>José Antonio </p>
+        <p>José Antonio Villarejo Caballero</p>
 
       </footer>
 
