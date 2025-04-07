@@ -1,25 +1,20 @@
 /* index.css */
-
-* {
-  box-sizing: border-box;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-}
+  box-sizing: border-box;
 
-body {
-  font-family: sans-serif;
 }
 
 header{
-  
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 15px 40px;
   background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -52,9 +47,16 @@ nav ul li a{
 
 }
 
+nav ul li a:hover{
+  color: #1d5e66;
+
+}
+
+/*LOGIN/REGISTRO*/
 .usuario-inicio {
   display: flex;
-  gap: 30px;
+  gap: 20px;
+  
   
 }
 
@@ -62,19 +64,22 @@ nav ul li a{
 
   display: flex;
   flex-direction: column;
+  gap: 5px;
   
 
 }
 
 .inicio-sesion input{
 
-  margin: 5px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 
 }
 
 .inicio-sesion button{
 
-  margin: 5px;
+  margin-top: 5px;
   border-radius: 4px;
 
 }
@@ -108,20 +113,50 @@ nav ul li a:hover{
 
 }
 
-input {
+
+header input {
   padding: 4px 8px;
-}
-
-.boton-buscar{
-
-  cursor: pointer;
-  font-weight: bold;
 }
 
 
 footer{
 
-  background-color: #333;
+  
+  background-color: #c1a2a2;
+  
+  padding: 40px;
+  
 
+}
+
+footer .footer-items{
+  
+  display: flex;
+  text-align: center;
+  
+
+}
+
+.footer-descripcion h3{
+  
+  font-size: 24px;
+
+}
+
+.footer-descripcion p{
+
+  margin: 5px 0 15px;
+
+}
+
+.footer-enlaces ul {
+  list-style: none;
+  padding: 0;
+
+}
+
+.proyecto-footer p{
+
+  color: black;
 
 }

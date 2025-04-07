@@ -1,33 +1,30 @@
-
-
 main{
 
-  height: 500px;
   background-color: #32919d;
-
-
+  padding: 40px;
+  
 }
 
-main h2{
+h2{
 
   color: #fff;
+  text-align: center;
+  font-size: 28px;
 
 }
 
 form {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 20px;
   gap: 12px;
 }
 
 form input[name="busqueda"] {
-  padding: 10px 14px;
+  padding: 10px;
   font-size: 16px;
   border: 1px solid #aaa;
   border-radius: 6px;
-  width: 300px;
+  width: 280px;
 }
 
 .boton-buscar {
@@ -44,4 +41,5 @@ form input[name="busqueda"] {
 
 .boton-buscar:hover {
   background-color: #555;
+  background-color: #4ab51f;
 }
