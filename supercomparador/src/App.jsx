@@ -12,8 +12,10 @@ function App() {
   const buscar = async (e) => {
     e.preventDefault();
   
-    if (busqueda.trim() === '') return;
-  
+    if (busqueda.trim() !== '') {
+      window.location.reload();
+    }
+
     try {
       const { data, error } = await supabase
         .from('productos')
@@ -27,8 +29,6 @@ function App() {
       console.error('Error al buscar productos:', error);
     }
   };
-
-
 
   return (
     <div className='App'>
