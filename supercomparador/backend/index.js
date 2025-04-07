@@ -4,18 +4,13 @@ const cors = require('cors');
 const { Pool } = require('pg');
 
 const app = express();
-const port = 3001;
 
 app.use(cors());
 app.use(express.json());
 
 // Configuración del pool usando variables del .env
 const pool = new Pool({
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  database: process.env.DB_NAME,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
+  connectionString: process.env.SUPABASE_DB_URL
 });
 
 //Configuración del endpoint
@@ -34,20 +29,7 @@ app.get('/productos', async (req, res) => {
   }
 });
 
-//Hacemos la llamada al endpoint
-const handleBuscar = async (e) => {
-  e.preventDefault(); // para que no se recargue la página
 
-  if (busqueda.trim() === '') return;
-
-  try {
-    const res = await fetch(`http://localhost:3001/productos?nombre=${encodeURIComponent(busqueda)}`);
-    const data = await res.json();
-    setProductos(data); // esto actualiza lo que se muestra
-  } catch (error) {
-    console.error('Error al buscar productos:', error);
-  }
-};
 
 // Prueba de conexión
 //async function probarConexion() {
