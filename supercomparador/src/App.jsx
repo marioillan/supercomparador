@@ -4,6 +4,9 @@ import './App.css'
 import logo from './assets/logo.png';
 
 function App() {
+  
+  const [busqueda, setBusqueda] = useState('');
+  const [productos, setProductos] = useState([]);
 
   const buscar = async (e) => {
     e.preventDefault();
