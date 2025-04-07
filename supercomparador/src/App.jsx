@@ -7,7 +7,6 @@ function App() {
   
   const [busqueda, setBusqueda] = useState('');
   const [productos, setProductos] = useState([]);
-  const [mostrarResultados, setMostrarResultados] = useState(false);
 
   const buscar = async (e) => {
     e.preventDefault();
@@ -23,7 +22,6 @@ function App() {
       if (error) throw error;
   
       setProductos(data);
-      setMostrarResultados(true);
     } catch (error) {
       console.error('Error al buscar productos:', error);
     }
@@ -34,7 +32,7 @@ function App() {
   return (
     <div className='App'>
       <header>
-        <a href="#"><img src={logo} alt="logo supercomparador"/></a>
+        <a href="/"><img src={logo} alt="logo supercomparador"/></a>
 
         <nav>
           <ul>
@@ -76,7 +74,7 @@ function App() {
             <button type="submit" className='boton-buscar'>Buscar</button>
           </form>
         </section>
-        {mostrarResultados && (
+        {busqueda !== '' && (
           <section className='lista-productos'>
             <ul>
               {productos.map((producto, index) => (
@@ -88,7 +86,7 @@ function App() {
               ))}
             </ul>
 
-            {productos.length === 0 && busqueda !== '' && (
+            {productos.length === 0 && (
               <p>No se encontraron productos relacionados.</p>
             )}
           </section>
