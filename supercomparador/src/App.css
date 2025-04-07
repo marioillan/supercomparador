@@ -1,0 +1,45 @@
+main{
+
+  background-color: #32919d;
+  padding: 40px;
+  
+}
+
+h2{
+
+  color: #fff;
+  text-align: center;
+  font-size: 28px;
+
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+form input[name="busqueda"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  width: 280px;
+}
+
+.boton-buscar {
+  padding: 10px 18px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.boton-buscar:hover {
+  background-color: #555;
+  background-color: #4ab51f;
+}
