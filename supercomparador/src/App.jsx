@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { supabase } from './supabaseClient.js'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css'
 import logo from './assets/logo.png';
 
@@ -32,7 +33,7 @@ function App() {
   return (
     <div className='App'>
       <header>
-        <a href="/"><img src={logo} alt="logo supercomparador"/></a>
+      <Link to="/"><img src={logo} alt="logo supercomparador"/></Link>
 
         <nav>
           <ul>
@@ -81,7 +82,7 @@ function App() {
                 <li key={index} className='producto-caja'>
                   <img src={producto.imagen_url} alt={producto.nombre} className='imagen-producto' />
                   <h3>{producto.nombre}</h3>
-                  <p>Categoría:{producto.categoria}</p>
+                  <p>Categoría: {producto.categoria}</p>
                 </li>
               ))}
             </ul>
