@@ -20,13 +20,15 @@ header{
 
 header img{
 
+  cursor:pointer;
   height: 120px;
 
 }
 
 header img:hover{
 
-  transition: translateX(-5px);
+  transform: translateX(3px);
+  transition: transform 0.3s;
 
 }
 
@@ -127,19 +129,17 @@ header input {
 
 footer{
 
-  
-  background-color: #c1a2a2;
-  
+  display: flex;
+  background-color: #c1a2a2; 
   padding: 40px;
-  
+  gap:50%;
+  color: black;
 
 }
 
-footer .footer-items{
-  
-  display: flex;
-  text-align: center;
-  
+.footer-descripcion{
+
+  margin-left: 40px;
 
 }
 
@@ -151,18 +151,18 @@ footer .footer-items{
 
 .footer-descripcion p{
 
+  font-style: italic;
   margin: 5px 0 15px;
-
 }
 
-.footer-enlaces ul {
-  list-style: none;
-  padding: 0;
+.proyectoISI p{
+
+  font-weight: bold;
 
 }
 
 .proyecto-footer p{
 
-  color: black;
+  
 
 }
