@@ -14,20 +14,20 @@ const pool = new Pool({
 });
 
 //Configuración del endpoint
-app.get('/productos', async (req, res) => {
-  const { nombre } = req.query;
+//app.get('/productos', async (req, res) => {
+//  const { nombre } = req.query;
 
-  try {
-    const result = await pool.query(
-      'SELECT nombre, categoria, imagen_url FROM productos WHERE LOWER(nombre) LIKE LOWER($1)',
-      [`%${nombre}%`]
-    );
-    res.json(result.rows);
-  } catch (err) {
-    console.error('Error al buscar productos:', err);
-    res.status(500).json({ error: 'Error al buscar productos' });
-  }
-});
+//  try {
+//    const result = await pool.query(
+//      'SELECT nombre, categoria, imagen_url FROM productos WHERE LOWER(nombre) LIKE LOWER($1)',
+//      [`%${nombre}%`]
+//    );
+//    res.json(result.rows);
+//  } catch (err) {
+//    console.error('Error al buscar productos:', err);
+//    res.status(500).json({ error: 'Error al buscar productos' });
+//  }
+//});
 
 
 
