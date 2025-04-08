@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { supabase } from './supabaseClient.js'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import {Link } from 'react-router-dom';
 import './App.css'
 import logo from './assets/logo.png';
 
@@ -91,6 +91,7 @@ function App() {
               <p>No se encontraron productos relacionados.</p>
             )}
           </section>
+
         )} 
 
       </main>
