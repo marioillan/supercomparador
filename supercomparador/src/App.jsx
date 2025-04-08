@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { supabase } from './supabaseClient.js'
-import {Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import './App.css'
 import logo from './assets/logo.png';
 
@@ -30,10 +30,17 @@ function App() {
     }
   };
 
+  const reiniciarBusqueda = () => {
+    setBusqueda('');
+    setProductos([]);
+    setMostrarResultados(false);
+  };
+
   return (
     <div className='App'>
       <header>
-      <Link to="/"><img src={logo} alt="logo supercomparador"/></Link>
+
+        <img src={logo} alt="logo supercomparador" onClick={reiniciarBusqueda}/>
 
         <nav>
           <ul>
