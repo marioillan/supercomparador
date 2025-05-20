@@ -1,0 +1,58 @@
+.formulario-registro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-registro input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.formulario-registro button {
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #007d8c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-registro button:hover {
+  background-color: #005e66;
+}
+
+.mensaje-confirmacion {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #e6f7f9;
+  border: 1px solid #b4e0e5;
+  border-radius: 12px;
+  text-align: center;
+  color: #005e66;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.mensaje-confirmacion h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.mensaje-confirmacion p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
