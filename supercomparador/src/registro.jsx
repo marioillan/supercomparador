@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { supabase } from './supabaseClient';
 import './App.css'
-import './Registro.css';
+import './registro.css';
 import logo from './assets/logo.png';
 import { Link } from 'react-router-dom';
 
@@ -116,7 +116,7 @@ function Registro() {
             ) : (
                 <form onSubmit={handleSubmit} className="formulario-registro">
                     {mensajeError && <div className="alerta-error">{mensajeError}</div>}
-                    
+
                     <input name="nombre" placeholder="Nombre" onChange={handleChange} />
                     <input name="apellidos" placeholder="Apellidos" onChange={handleChange} />
                     <input name="usuario" placeholder="Usuario" onChange={handleChange} />
