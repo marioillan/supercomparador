@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './App.css';
 import logo from './assets/logo.png';
 
-function Home() {
+function Productos() {
   
   const [busqueda, setBusqueda] = useState('');
   const [productos, setProductos] = useState([]);
@@ -118,4 +118,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Productos;

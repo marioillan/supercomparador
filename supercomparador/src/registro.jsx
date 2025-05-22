@@ -38,8 +38,19 @@ function Registro() {
       .eq('usuario', form.usuario)
       .single();
 
+      const { data: correoExistente } = await supabase
+      .from('usuarios')
+      .select('*')
+      .eq('email', form.email)
+      .single();
+
     if (usuarioExistente) {
       setMensajeError('El nombre de usuario ya está en uso. Elige otro.');
+      return;
+    }
+
+    if (correoExistente) {
+      setMensajeError('El correo electrónico ya está en uso. Introduce otro.');
       return;
     }
 
