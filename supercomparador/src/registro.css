@@ -50,9 +50,11 @@
 .mensaje-confirmacion h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
+  color: green;
 }
 
 .mensaje-confirmacion p {
+  
   font-size: 1.1rem;
   line-height: 1.5;
 }

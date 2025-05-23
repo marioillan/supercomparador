@@ -4,6 +4,7 @@ import './App.css'
 import './registro.css';
 import logo from './assets/logo.png';
 import { Link } from 'react-router-dom';
+import Header from './header';
 
 function Registro() {
   const [form, setForm] = useState({
@@ -65,6 +66,11 @@ function Registro() {
       return;
     }
 
+    if (!data.user) {
+      alert("Error: El usuario no está confirmado o no se ha creado correctamente.");
+      return;
+    }
+
     //Igualmente insertamos los datos en la tabla de usuarios de la base de datos
     const userId = data.user.id;
     const { error: dbError } = await supabase.from('usuarios').insert({
@@ -84,45 +90,14 @@ function Registro() {
   };
 
   return (
-    <div className='App'>
-          <header>
-            <Link to="/">
-                <img src={logo} alt="logo supercomparador"/>
-            </Link>
-            <nav>
-              <ul>
-                <li><a href="#">Supermercados</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Sobre Nosotros</a></li>
-              </ul>
-            </nav>
-    
-            <div className='usuario-inicio'>
-              <div className='inicio-sesion'>
-              <input 
-                  type="text" 
-                  placeholder="Nombre Usuario" 
-                  name="usuario"
-              />
-              <input 
-                  type="password" 
-                  placeholder="Contraseña" 
-                  name="contraseña"
-              />
-                <button type="submit" className='boton-usuario'>Iniciar Sesión</button>
-              </div>
-                <Link to="/registro">
-                    <button className="boton-usuario">Registrarse</button>
-                </Link>
-            </div>
-    
-          </header>
+    <>
+        <Header />
           <main>
 
             {registroCompletado ? (
                 <div className="mensaje-confirmacion">
                     <h2>Registro exitoso</h2>
-                    <p>Te hemos enviado un email de confirmación. Revisa tu bandeja de entrada.</p>
+                    <Link to="/"><p>Volver al Inicio</p></Link>
                 </div>
             ) : (
                 <form onSubmit={handleSubmit} className="formulario-registro">
@@ -151,7 +126,7 @@ function Registro() {
                 </div>
           </footer>
 
-    </div>
+    </>
   );
 }
 

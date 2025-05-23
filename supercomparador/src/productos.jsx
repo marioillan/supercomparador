@@ -3,6 +3,7 @@ import { supabase } from './supabaseClient';
 import { Link } from 'react-router-dom';
 import './App.css';
 import logo from './assets/logo.png';
+import Header from './header';
 
 function Productos() {
   
@@ -31,39 +32,8 @@ function Productos() {
   };
 
   return (
-    <div className='home'>
-      <header>
-        <Link to="/">
-            <img src={logo} alt="logo supercomparador"/>
-        </Link>
-        <nav>
-          <ul>
-            <li><Link to="/supermercados"><p>Supermercados</p></Link></li>
-            <li><Link to="/productos"><p>Productos</p></Link></li>
-            <li><Link to="/catalogos"><p>Catálogos</p></Link></li>
-          </ul>
-        </nav>
-
-        <div className='usuario-inicio'>
-          <div className='inicio-sesion'>
-          <input 
-              type="text" 
-              placeholder="Correo electrónico" 
-              name="correo"
-          />
-          <input 
-              type="password" 
-              placeholder="Contraseña" 
-              name="contraseña"
-          />
-            <button type="submit" className='boton-usuario'>Iniciar Sesión</button>
-          </div>
-          <Link to="/registro">
-            <button className="boton-usuario">Registrarse</button>
-          </Link>
-        </div>
-
-      </header>
+    <>
+      <Header />
 
       <main>
         <section className='buscador'>
@@ -113,7 +83,7 @@ function Productos() {
         </div>
       </footer>
 
-    </div>
+    </>
 
   );
 }

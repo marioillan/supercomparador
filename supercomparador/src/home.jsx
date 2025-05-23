@@ -1,72 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { supabase } from './supabaseClient';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './App.css';
 import logo from './assets/logo.png';
+import Header from './header';
 
 function Home() {
-  
+
   const [busqueda, setBusqueda] = useState('');
   const [productos, setProductos] = useState([]);
   const [mostrarResultados, setMostrarResultados] = useState(false);
 
-  const buscar = async (e) => {
-    e.preventDefault();
-  
-    if (busqueda.trim() === '') return;
-
-    try {
-      const { data, error } = await supabase
-        .from('productos')
-        .select('nombre, categoria, imagen_url')
-        .ilike('nombre', `%${busqueda}%`);
-  
-      if (error) throw error;
-  
-      setProductos(data);
-      setMostrarResultados(true);
-    } catch (error) {
-      console.error('Error al buscar productos:', error);
-    }
-  };
-
   return (
-    <div className='home'>
-      <header>
-        <Link to="/">
-            <img src={logo} alt="logo supercomparador"/>
-        </Link>
-        <nav>
-          <ul>
-            <li><Link to="/supermercados"><p>Supermercados</p></Link></li>
-            <li><Link to="/productos"><p>Productos</p></Link></li>
-            <li><Link to="/catalogos"><p>Catálogos</p></Link></li>
-          </ul>
-        </nav>
-
-        <div className='usuario-inicio'>
-          <div className='inicio-sesion'>
-          <input 
-              type="text" 
-              placeholder="Correo electrónico" 
-              name="correo"
-          />
-          <input 
-              type="password" 
-              placeholder="Contraseña" 
-              name="contraseña"
-          />
-            <button type="submit" className='boton-usuario'>Iniciar Sesión</button>
-          </div>
-          <Link to="/registro">
-            <button className="boton-usuario">Registrarse</button>
-          </Link>
-        </div>
-
-      </header>
+    <>
+      <Header />
 
       <main>
-        <section className='buscador'>
+        {/* <section className='buscador'>
           <h2>Buscar productos:</h2>
           <form onSubmit={buscar}>
             <input 
@@ -95,7 +45,11 @@ function Home() {
             )}
           </section>
 
-        )} 
+          
+          
+        )}
+          
+        */}
 
       </main>
 
@@ -113,7 +67,7 @@ function Home() {
         </div>
       </footer>
 
-    </div>
+    </>
 
   );
 }
