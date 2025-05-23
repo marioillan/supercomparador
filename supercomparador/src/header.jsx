@@ -8,6 +8,7 @@ function Header() {
   const [credenciales, setCredenciales] = useState({ email: '', password: '' });
   const [usuario, setUsuario] = useState(null);
   const [errorLogin, setErrorLogin] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const obtenerSesion = async () => {
@@ -24,6 +25,9 @@ function Header() {
           setUsuario({ id: userId, nombreUsuario: data.usuario });
         }
       }
+
+        setIsLoading(false);
+
     };
 
     obtenerSesion();
@@ -76,6 +80,7 @@ function Header() {
     }
   };
 
+
   const cerrarSesion = async () => {
     await supabase.auth.signOut();
     setUsuario(null);
@@ -96,7 +101,9 @@ function Header() {
       </nav>
 
       <div className='usuario-inicio'>
-        {usuario ? (
+        {isLoading ? (
+            null
+        ) : usuario ? (
           <div className='sesion'>
             <p>{usuario.nombreUsuario}</p>
             <button className='boton-usuario' onClick={cerrarSesion}>Cerrar sesión</button>
