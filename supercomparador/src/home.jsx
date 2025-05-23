@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { supabase } from './supabaseClient';
 import { Link, useNavigate } from 'react-router-dom';
 import './App.css';
-import logo from './assets/logo.png';
 import Header from './header';
 
 function Home() {

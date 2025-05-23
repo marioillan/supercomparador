@@ -1,9 +1,9 @@
 import {Routes, Route, Link} from 'react-router-dom';
 import Home from './home';
 import Registro from './registro';
-import Supermercados from './supermercados'
-import Catalogos from './catalogos'
-import Productos from './productos'
+import Supermercados from './supermercados';
+import Catalogos from './catalogos';
+import Productos from './productos';
 
 export default function App() {
   return (
