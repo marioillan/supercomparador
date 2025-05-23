@@ -4,6 +4,7 @@ import './App.css';
 import './registro.css';
 import { Link } from 'react-router-dom';
 import Header from './header';
+import Footer from './footer';
 
 function Registro() {
   const [form, setForm] = useState({
@@ -111,19 +112,7 @@ function Registro() {
                 </form>
             )}
           </main>
-          <footer>
-                <div className='footer-descripcion'>
-                    <h3>SUPERCOMPARADOR</h3>
-                    <p>Haz que tu compra sea efectiva y rápida con nuestros servicios</p>
-                    <p>Confia en nosotros</p>
-                </div>
-                <div className='proyectoISI'>
-                    <h4>PROYECTO SUPER COMPARADOR 2025 ISI</h4>
-                    <p>Integrantes:</p>
-                    <p>Mario Illán Valero</p>
-                    <p>José Antonio Villarejo Caballero</p>
-                </div>
-          </footer>
+          <Footer />
 
     </>
   );
