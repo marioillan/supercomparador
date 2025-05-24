@@ -1,3 +1,12 @@
+.formularioRegistro {
+
+  justify-content: center;
+  align-items: center;
+  min-height: calc(105vh - 120px);
+  padding: 2rem;
+
+}
+
 .formulario-registro {
   display: flex;
   flex-direction: column;
@@ -11,6 +20,15 @@
 }
 
 .formulario-registro input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.formulario-registro select {
   width: 100%;
   margin-bottom: 1rem;
   padding: 0.8rem;

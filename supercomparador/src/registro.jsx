@@ -12,11 +12,12 @@ function Registro() {
     password: '',
     nombre: '',
     apellidos: '',
-    usuario: ''
+    usuario: '',
+    ciudad: ''
   });
 
-    const [mensajeError, setMensajeError] = useState('');
-    const [registroCompletado, setRegistroCompletado] = useState(false);
+  const [mensajeError, setMensajeError] = useState('');
+  const [registroCompletado, setRegistroCompletado] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -27,7 +28,7 @@ function Registro() {
     e.preventDefault();
 
     //Valida si se han rellenado todos los campos
-    if (!form.nombre || !form.apellidos || !form.usuario || !form.email || !form.password) {
+    if (!form.nombre || !form.apellidos || !form.usuario || !form.email || !form.password || !form.ciudad) {
       setMensajeError('Por favor, completa todos los campos.');
       return;
     }
@@ -45,12 +46,12 @@ function Registro() {
       .eq('email', form.email)
       .single();
 
-    if (usuarioExistente) {
+    if(usuarioExistente){
       setMensajeError('El nombre de usuario ya está en uso. Elige otro.');
       return;
     }
 
-    if (correoExistente) {
+    if(correoExistente){
       setMensajeError('El correo electrónico ya está en uso. Introduce otro.');
       return;
     }
@@ -66,11 +67,6 @@ function Registro() {
       return;
     }
 
-    if (!data.user) {
-      alert("Error: El usuario no está confirmado o no se ha creado correctamente.");
-      return;
-    }
-
     //Igualmente insertamos los datos en la tabla de usuarios de la base de datos
     const userId = data.user.id;
     const { error: dbError } = await supabase.from('usuarios').insert({
@@ -79,6 +75,7 @@ function Registro() {
       apellidos: form.apellidos,
       usuario: form.usuario,
       email: form.email,
+      ciudad: form.ciudad,
       fecha_registro: new Date().toISOString()
     });
 
@@ -92,25 +89,33 @@ function Registro() {
   return (
     <>
         <Header />
-          <main>
+          <main className="formularioRegistro">
+              {registroCompletado ? (
+                  <div className="mensaje-confirmacion">
+                      <h2>Registro exitoso</h2>
+                      <Link to="/"><p>Volver al Inicio</p></Link>
+                  </div>
+              ) : (
+                  <form onSubmit={handleSubmit} className="formulario-registro">
+                      {mensajeError && <div className="alerta-error">{mensajeError}</div>}
 
-            {registroCompletado ? (
-                <div className="mensaje-confirmacion">
-                    <h2>Registro exitoso</h2>
-                    <Link to="/"><p>Volver al Inicio</p></Link>
-                </div>
-            ) : (
-                <form onSubmit={handleSubmit} className="formulario-registro">
-                    {mensajeError && <div className="alerta-error">{mensajeError}</div>}
+                      <input name="nombre" placeholder="Nombre" value={form.nombre} onChange={handleChange} />
+                      <input name="apellidos" placeholder="Apellidos" value={form.apellidos} onChange={handleChange} />
+                      <input name="usuario" placeholder="Usuario" value={form.usuario} onChange={handleChange} />
+                      <select name="ciudad" value={form.ciudad} onChange={handleChange}>
+                          <option value="Granada">Granada</option>
+                          <option value="Jaen">Jaén</option>
+                          <option value="Almeria">Almería</option>
+                          <option value="Sevilla">Sevilla</option>
+                          <option value="Cordoba">Córdoba</option>
+                          <option value="Huelva">Huelva</option>
+                      </select>
+                      <input name="email" placeholder="Email" value={form.email} type="email" onChange={handleChange} />
+                      <input name="password" placeholder="Contraseña" value={form.password} type="password" onChange={handleChange} />
+                      <button type="submit">Registrarse</button>
+                  </form>
+              )}
 
-                    <input name="nombre" placeholder="Nombre" onChange={handleChange} />
-                    <input name="apellidos" placeholder="Apellidos" onChange={handleChange} />
-                    <input name="usuario" placeholder="Usuario" onChange={handleChange} />
-                    <input name="email" placeholder="Email" type="email" onChange={handleChange} />
-                    <input name="password" placeholder="Contraseña" type="password" onChange={handleChange} />
-                    <button type="submit">Registrarse</button>
-                </form>
-            )}
           </main>
           <Footer />
 

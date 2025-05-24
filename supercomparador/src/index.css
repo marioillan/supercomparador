@@ -98,9 +98,10 @@ nav ul li a:hover{
   font-weight: bold;
   cursor: pointer;
   border: none;
-  background-color: #787c88;
+  background-color: #4ab51f;
   color: #fff;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .boton-usuario a{
@@ -110,7 +111,7 @@ nav ul li a:hover{
 }
 
 .boton-usuario:hover {
-  background-color: #4ab51f;
+  background-color: #1d3f0f;
   color: #ffffff;
 
 }
