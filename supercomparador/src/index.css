@@ -89,6 +89,7 @@ nav ul li a:hover{
 
   margin-top: 5px;
   border-radius: 4px;
+ 
 
 }
 
@@ -102,6 +103,7 @@ nav ul li a:hover{
   color: #fff;
   border-radius: 4px;
   transition: background-color 0.3s ease;
+  margin-right: 5px;
 }
 
 .boton-usuario a{

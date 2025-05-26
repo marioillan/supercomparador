@@ -1,17 +1,22 @@
-.catalogos {
+.mainCatalogos {
   padding: 2rem;
-  background-color: #f9f9f9;
   min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
-.catalogos h1 {
-  color: #1d5e66;
+.mainCatalogos h1 {
+  color: #fff;
   font-size: 32px;
   margin-bottom: 2rem;
   text-align: center;
+}
+
+.catalogos-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
 }
 
 .catalogo {
@@ -19,17 +24,16 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  max-width: 400px;
   width: 100%;
-  margin-bottom: 2rem;
-  padding: 2rem;
+  max-width: 350px;
+  padding: 1.5rem;
   text-align: center;
 }
 
 .catalogo h2 {
   color: #32919d;
   margin-bottom: 1rem;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .catalogo img {
