@@ -134,10 +134,10 @@ footer{
 
   display: flex;
   background-color: #ffffff; 
-  text-align: center;
   padding: 1rem;
   gap:50%;
   color: black;
+  padding: 2rem;
 
 }
 

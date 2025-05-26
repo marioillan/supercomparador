@@ -18,12 +18,19 @@ function Catalogos() {
 
       try {
         const resDia = await fetch('http://localhost:5000/api/folletos-dia');
-        const datosDia = await resDia.json(); // esto ya es un array
+        const resMas = await fetch("http://localhost:5000/api/folletos-mas");
+        const datosDia = await resDia.json(); 
+        const datosMas = await resMas.json();
 
-        const datosValidos = datosDia.filter(folleto => folleto.imagen_portada && folleto.enlace_pdf);
-        setFolletos(datosValidos);
+        const folletosValidosDia = datosDia.filter(f => f.imagen_portada && f.enlace_pdf);
+        const folletosValidosMas = datosMas.filter(f => f.imagen_portada && f.enlace_pdf);
+
+        const todosLosFolletos = [...folletosValidosDia, ...folletosValidosMas];
+        setFolletos(todosLosFolletos);
+
       } catch (error) {
         console.error('Error al obtener los folletos:', error);
+        setFolletos([]);
       } finally {
         setCargando(false);
       }
@@ -47,24 +54,28 @@ function Catalogos() {
               <p>No hay catálogos disponibles en este momento.</p>
             )}
 
-            {!cargando && folletos.map((folleto, index) => (
-              <div key={index} className="catalogo">
-                <h2>Folleto {folleto.supermercado}</h2>
-                <img
-                  src={folleto.imagen_portada}
-                  alt="Portada del folleto"
-                  className="imagen-folleto"
-                />
-                <a
-                  href={folleto.enlace_pdf}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="boton-descarga"
-                >
-                  Descargar folleto en PDF
-                </a>
-              </div>
+          {!cargando && (
+            <div className="catalogos-lista">
+              {folletos.map((folleto, index) => (
+                <div key={index} className="catalogo">
+                  <h2>Folleto {folleto.supermercado}</h2>
+                  <img
+                    src={folleto.imagen_portada}
+                    alt="Portada del folleto"
+                    className="imagen-folleto"
+                  />
+                  <a
+                    href={folleto.enlace_pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="boton-descarga"
+                  >
+                    Descargar folleto en PDF
+                  </a>
+                </div>
               ))}
+            </div>
+          )}
 
       </main>
 

@@ -117,7 +117,7 @@ function MenuUsuario() {
                     className="favorito-img"
                   />
                   <div className="favorito-detalles">
-                    <span className="nombre-producto">{item.productos.nombre}</span>
+                    <span className="nombre-producto">Nombre producto: {item.productos.nombre}</span>
                     <span className="supermercado-producto">Supermercado: {item.productos.supermercado}</span>
                     <span className="precio-producto">Precio: {item.productos.precio} €</span>
                   </div>

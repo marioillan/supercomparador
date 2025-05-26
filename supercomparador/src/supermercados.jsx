@@ -8,6 +8,8 @@ import './supermercados.css';
 import diaImg from './assets/dialogo.png';
 import alcampoImg from './assets/alcampologo.png';
 import hipercorImg from './assets/hipercorlogo.png';
+import carrefourImg from './assets/carrefourlogo.png';
+import masImg from './assets/maslogo.png';
 
 function Supermercados() {
   const { usuario, isLoading } = useAuth();
@@ -80,7 +82,9 @@ function Supermercados() {
             return (
               nombre.includes('mercadona') ||
               nombre.includes('dia') ||
-              nombre.includes('alcampo')
+              nombre.includes('alcampo') ||
+              nombre.includes('carrefour') ||
+              nombre.includes('supermercado mas')
             );
           });
           setSupermercados(filtrados);
@@ -138,6 +142,20 @@ function Supermercados() {
               <div className='infoSupermercado'>
                 <h4>Supermercados Hipercor</h4>
                 <p>Horario:</p><p>10:00-22:00</p>
+              </div>
+            </div>
+            <div className='supermercadoCard'>
+              <div className='imgSupermercado'><a href="https://www.carrefour.es/"><img src={carrefourImg} alt="img carrefour" /></a></div>
+              <div className='infoSupermercado'>
+                <h4>Supermercados Carrefour</h4>
+                <p>Horario:</p><p>9:00-22:00</p>
+              </div>
+            </div>
+            <div className='supermercadoCard'>
+              <div className='imgSupermercado'><a href="https://www.supermercadosmas.com/"><img src={masImg} alt="img mas" /></a></div>
+              <div className='infoSupermercado'>
+                <h4>Supermercados MAS</h4>
+                <p>Horario:</p><p>9:00-21:30</p>
               </div>
             </div>
         </div>

@@ -43,44 +43,51 @@ def obtener_folletos_dia():
         }), 500
 
 
-@app.route("/api/folleto-alcampo")
-def obtener_folleto_alcampo():
-    url = "https://www.compraonline.alcampo.es/content/folletos-alcampo"
+@app.route("/api/folletos-mas")
+def obtener_folletos_mas():
+    """
+    Scrapea todos los folletos disponibles de Supermercados MAS.
+    Devuelve una lista con la imagen de portada y el enlace al visor.
+    """
+    url = "https://folletos.supermercadosmas.com/indice/"  # Página embebida desde su web principal
+    base_url = ""  # los enlaces son absolutos
 
     try:
-        respuesta = requests.get(url, headers={"User-Agent": "Mozilla/5.0"})
-        html = respuesta.text
-        soup = BeautifulSoup(html, "html.parser")
+        headers = {"User-Agent": "Mozilla/5.0"}
+        respuesta = requests.get(url, headers=headers)
+        soup = BeautifulSoup(respuesta.text, "html.parser")
 
-        img_tag = soup.select_one("img[src*='cover_page']")
-        imagen_portada = img_tag["src"] if img_tag else None
+        folletos = []
 
-        enlace_visor_tag = soup.find("a", string="Ver folleto")
-        enlace_visor = enlace_visor_tag["href"] if enlace_visor_tag else None
+        # Buscar todos los bloques que contienen los folletos
+        bloques = soup.select("div.contenedor-folleto-completo")
 
-        if not imagen_portada or not enlace_visor:
-            return jsonify({"error": "No se encontro el folleto de Alcampo."}), 404
-        
-        respuesta_visor = requests.get(enlace_visor, headers={"User-Agent": "Mozilla/5.0"})
-        soup_visor = BeautifulSoup(respuesta_visor.text, "html.parser")
+        for bloque in bloques:
+            imagen_tag = bloque.find("img")
+            enlace_tag = bloque.find("a", href=True)
 
-        enlace_pdf_tag = soup_visor.select_one("a#downloadAsPdf")
-        enlace_pdf = enlace_pdf_tag["href"] if enlace_pdf_tag else None
+            if imagen_tag and enlace_tag:
+                imagen_portada = imagen_tag["src"]
+                enlace_pdf = enlace_tag["href"]
 
-        if not enlace_pdf:
-            return jsonify({"error": "No se encontró el PDF en el visor."}), 404
+                folletos.append({
+                    "supermercado": "MAS",
+                    "imagen_portada": imagen_portada,
+                    "enlace_pdf": enlace_pdf
+                })
 
-        return jsonify({
-            "supermercado": "Alcampo",
-            "imagen_portada": imagen_portada,
-            "enlace_pdf": enlace_pdf
-        })
+        # Validación: si no se encontró ninguno
+        if not folletos:
+            return jsonify({"error": "No se encontraron folletos de Supermercados MAS."}), 404
+
+        return jsonify(folletos)
 
     except Exception as e:
         return jsonify({
-            "error": "Error al obtener el folleto de Alcampo.",
+            "error": "Error al hacer scraping de Supermercados MAS.",
             "detalle": str(e)
         }), 500
+
 
 if __name__ == "__main__":
     app.run(debug=True)
