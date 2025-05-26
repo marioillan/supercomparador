@@ -4,6 +4,7 @@ import Registro from './registro';
 import Supermercados from './supermercados';
 import Catalogos from './catalogos';
 import Productos from './productos';
+import MenuUsuario from './menuUsuario';
 
 export default function App() {
   return (
@@ -13,7 +14,7 @@ export default function App() {
       <Route path="/supermercados" element={<Supermercados />} />
       <Route path="/catalogos" element={<Catalogos />} />
       <Route path="/productos" element={<Productos />} />
-      
+      <Route path="/menu-usuario" element={<MenuUsuario />} />
     </Routes>
   );
 }

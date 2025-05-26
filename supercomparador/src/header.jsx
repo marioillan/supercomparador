@@ -106,6 +106,9 @@ function Header() {
         ) : usuario ? (
           <div className='sesion'>
             <p>{usuario.nombreUsuario}</p>
+            <Link to="/menu-usuario">
+              <button className='boton-usuario'>Menú usuario</button>
+            </Link>
             <button className='boton-usuario' onClick={cerrarSesion}>Cerrar sesión</button>
           </div>
         ) : (
