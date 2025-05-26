@@ -132,7 +132,7 @@
                     <h3>{producto.nombre}</h3>
                     <p><strong>Supermercado:</strong> {producto.supermercado}</p>
                     <p><strong>Precio:</strong> {producto.precio} €</p>
-                    <button onClick={() => agregarAFavoritos(producto)}> Añadir a favoritos</button>
+                    <button className='boton-buscar' onClick={() => agregarAFavoritos(producto) }> Añadir a favoritos</button>
                     <p style={{ marginTop: '5px', color: 'green' }}>
                       {mensajesFavoritos[producto.id]}
                     </p>
