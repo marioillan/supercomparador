@@ -94,7 +94,6 @@ function Productos() {
             </select>
 
             <select value={ordenPrecio} onChange={(e) => setOrdenPrecio(e.target.value)}>
-              <option value="">Ordenar por precio</option>
               <option value="asc">Menor a mayor</option>
               <option value="desc">Mayor a menor</option>
             </select>
