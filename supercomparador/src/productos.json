@@ -1,122 +1,338 @@
 [
   {
-    "nombre": "Espárrago verde fino Carrefour El Mercado 250 g",
-    "precio": "2,49 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/335208_00_1.jpg"
+    "nombre": "Yogur griego stracciatella Fidias de Dia pack 6 x 125 g",
+    "precio": 2.15,
+    "imagen": "https://www.dia.es/product_images/272542/272542_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Patata Lavada Carrefour 1 kg aprox",
-    "precio": "1,95 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/572092_00_1.jpg"
+    "nombre": "Yogur griego natural Fidias de Dia pack 6 x 125 g",
+    "precio": 1.69,
+    "imagen": "https://www.dia.es/product_images/135285/135285_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Limón Carrefour a granel 1kg aprox",
-    "precio": "2,29 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/100139_00_1.jpg"
+    "nombre": "Yogur griego natural con azúcar de caña Fidias de Dia pack 6 x 125 g",
+    "precio": 1.55,
+    "imagen": "https://www.dia.es/product_images/303597/303597_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Pan Pannier plus mediana 300 g",
-    "precio": "",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/859573_00_1.jpg"
+    "nombre": "Yogur griego con fresa Fidias de Dia pack 6 x 125 g",
+    "precio": 1.7,
+    "imagen": "https://www.dia.es/product_images/135291/135291_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Panecillo gran reserva Carrefour 1 ud",
-    "precio": "0,32 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/902215_00_1.jpg"
+    "nombre": "Yogur natural Dia Láctea pack 8 x 125 g",
+    "precio": 1.39,
+    "imagen": "https://www.dia.es/product_images/272536/272536_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Tomate rama Carrefour 1 kg aprox",
-    "precio": "2,05 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/718723_00_1.jpg"
+    "nombre": "Yogur natural azucarado Dia Láctea pack 8 x 125 g",
+    "precio": 1.39,
+    "imagen": "https://www.dia.es/product_images/272537/272537_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Mandarina Carrefour a granel 1 kg aprox",
-    "precio": "1,99 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/235316_00_1.jpg"
+    "nombre": "Yogur natural con azúcar de caña Dia Láctea pack 8 x 125 g",
+    "precio": 1.39,
+    "imagen": "https://www.dia.es/product_images/272538/272538_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Arándanos Carrefour El Mercado 225 g",
-    "precio": "4,15 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/457359_00_1.jpg"
+    "nombre": "Yogur natural Danone pack 8 x 120 g",
+    "precio": 1.99,
+    "imagen": "https://www.dia.es/product_images/141743/141743_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Mango Carrefour a granel 1 kg aprox",
-    "precio": "",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/430552_00_1.jpg"
+    "nombre": "Yogur sabores Dia Láctea pack 16 x 125 g",
+    "precio": 2.49,
+    "imagen": "https://www.dia.es/product_images/100604/100604_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Barra rústica 1 ud.",
-    "precio": "0,71 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/423920_00_1.jpg"
+    "nombre": "Bebida de fresa Dia Láctea pack 12 x 100 g",
+    "precio": 2.09,
+    "imagen": "https://www.dia.es/product_images/274134/274134_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Baguette 2 ud",
-    "precio": "0,96 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/126922_00_1.jpg"
+    "nombre": "Yogur líquido sabor fresa y plátano Dia Láctea botella 1 Kg",
+    "precio": 1.4,
+    "imagen": "https://www.dia.es/product_images/254923/254923_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Fresón tarrina 250 g",
-    "precio": "",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/035920_00_1.jpg"
+    "nombre": "Yogur con frutas Dia Láctea pack 8 x 125 g",
+    "precio": 1.99,
+    "imagen": "https://www.dia.es/product_images/14277/14277_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Cebolleta blanca manojo de 3-4 piezas",
-    "precio": "0,99 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/050295_00_1.jpg"
+    "nombre": "Petit de fresa y plátano Dia Láctea pack 6 x 50 g",
+    "precio": 0.99,
+    "imagen": "https://www.dia.es/product_images/265288/265288_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Zanahoria Círculo de Calidad 500 g aprox",
-    "precio": "0,89 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/369458_00_1.jpg"
+    "nombre": "Petit de fresa líquido Dia Láctea pack 4 x 80 g",
+    "precio": 1.93,
+    "imagen": "https://www.dia.es/product_images/265284/265284_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Ensalada cuatro estaciones Carrefour 250 g",
-    "precio": "0,75 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/261721_00_1.jpg"
+    "nombre": "Yogur de fresa líquido Danonino pack 4 x 70 g",
+    "precio": 2.59,
+    "imagen": "https://www.dia.es/product_images/231491/231491_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Bacon en lonchas Carrefour El Mercado sin gluten 200 g",
-    "precio": "2,15 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/710687_00_1.jpg"
+    "nombre": "Petit de fresa Dia Láctea pack 6 x 50 g",
+    "precio": 0.99,
+    "imagen": "https://www.dia.es/product_images/265287/265287_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Manzana golden Círculo de Calidad a granel 1 Kg aprox",
-    "precio": "1,85 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/261962_00_1.jpg"
+    "nombre": "Yogur desnatado con frutas Dia Láctea pack 8 x 125 g",
+    "precio": 1.99,
+    "imagen": "https://www.dia.es/product_images/5684/5684_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Pan de leche Carrefour Classic 350 g.",
-    "precio": "1,36 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/835359_00_1.jpg"
+    "nombre": "Yogur desnatado sabor limón, fresa y piña Dia Láctea pack 6 x 125 g",
+    "precio": 1.29,
+    "imagen": "https://www.dia.es/product_images/145652/145652_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Ajo Círculo de Calidad 250 g",
-    "precio": "2,05 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/496386_00_1.jpg"
+    "nombre": "Yogur natural desnatado edulcorado Dia Láctea pack 6 x 125 g",
+    "precio": 0.99,
+    "imagen": "https://www.dia.es/product_images/128592/128592_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Patata lavada para todo uso Carrefour El Mercado 5 kg",
-    "precio": "",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/793632_00_1.jpg"
+    "nombre": "Yogur natural desnatado Dia Láctea pack 6 x 125 g",
+    "precio": 0.99,
+    "imagen": "https://www.dia.es/product_images/128591/128591_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Pan de molde sin corteza Bimbo 450 g.",
-    "precio": "2,45 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/367981_00_1.jpg"
+    "nombre": "Cremoso desnatado con nueces y cereales Bífidus Dia pack 4 x 125 g",
+    "precio": 1.25,
+    "imagen": "https://www.dia.es/product_images/252335/252335_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Queso de untar clásico Carrefour Classic 300 g.",
-    "precio": "1,50 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/918951_00_1.jpg"
+    "nombre": "Bebida de fresa y plátano/coco y piña L-Casei Dia pack 12 x 100 g",
+    "precio": 2.45,
+    "imagen": "https://www.dia.es/product_images/101846/101846_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Panecillo blanco 11 ud.",
-    "precio": "",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/498741_00_1.jpg"
+    "nombre": "Cremoso con mango Bífidus Dia pack 4 x 125 g",
+    "precio": 1.25,
+    "imagen": "https://www.dia.es/product_images/186089/186089_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   },
   {
-    "nombre": "Cogollos Carrefour 400 g",
-    "precio": "0,99 €",
-    "imagen": "https://static.carrefour.es/hd_350x_/img_pim_food/235347_00_1.jpg"
+    "nombre": "Cremoso desnatado con fresa Bífidus Dia pack 4 x 125 g",
+    "precio": 1.25,
+    "imagen": "https://www.dia.es/product_images/42065/42065_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Postre vegetal de soja sabor chocolate Vegedia pack 4 x 100 g",
+    "precio": 1.55,
+    "imagen": "https://www.dia.es/product_images/119585/119585_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Postre de soja sabor melocotón, piña y fruta de la pasión Alpro pack 4 x 125 g",
+    "precio": 2.79,
+    "imagen": "https://www.dia.es/product_images/248784/248784_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Postre de soja sabor arándanos y frutos rojos Alpro pack 4 x 125 g",
+    "precio": 2.79,
+    "imagen": "https://www.dia.es/product_images/248781/248781_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Postre de soja con arándanos Alpro vaso 400 g",
+    "precio": 2.29,
+    "imagen": "https://www.dia.es/product_images/274008/274008_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Kéfir Dia Láctea vaso 500 g",
+    "precio": 1.49,
+    "imagen": "https://www.dia.es/product_images/253810/253810_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Postre natural de soja con coco Alpro vaso 400 g",
+    "precio": 1.99,
+    "imagen": "https://www.dia.es/product_images/248783/248783_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Kéfir Pastoret tarrina 500 g",
+    "precio": 2.35,
+    "imagen": "https://www.dia.es/product_images/244885/244885_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Kéfir desnatado Pastoret vaso 500 g",
+    "precio": 2.35,
+    "imagen": "https://www.dia.es/product_images/280088/280088_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Yogur de stracciatella alto en proteínas Dia Láctea pack 4 x 120 g",
+    "precio": 1.19,
+    "imagen": "https://www.dia.es/product_images/303224/303224_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Preparado de queso quark con fresa alto en proteínas Dia Láctea tarrina 200 g",
+    "precio": 0.99,
+    "imagen": "https://www.dia.es/product_images/297312/297312_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Mousse de cacao alta en proteínas Dia Láctea vaso 200 g",
+    "precio": 1.29,
+    "imagen": "https://www.dia.es/product_images/292374/292374_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Preparado de queso quark con frambuesa alto en proteínas Dia Láctea tarrina 200 g",
+    "precio": 0.99,
+    "imagen": "https://www.dia.es/product_images/297314/297314_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Flan de vainilla Caprichoso Dia pack 6 x 100 g",
+    "precio": 1.09,
+    "imagen": "https://www.dia.es/product_images/105814/105814_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Natillas de vainilla con galleta Caprichoso Dia pack 4 x 125 g",
+    "precio": 1.25,
+    "imagen": "https://www.dia.es/product_images/113550/113550_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Copa de chocolate y nata Caprichoso Dia pack 4 x 115 g",
+    "precio": 1.35,
+    "imagen": "https://www.dia.es/product_images/140493/140493_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Natillas sabor vainilla Caprichoso Dia pack 4 x 125 g",
+    "precio": 1.05,
+    "imagen": "https://www.dia.es/product_images/294946/294946_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Arroz con leche con canela Caprichoso Dia pack 4 x 125 g",
+    "precio": 1.3,
+    "imagen": "https://www.dia.es/product_images/85630/85630_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Arroz con leche con canela Caprichoso Dia pack 2 x 125 g",
+    "precio": 1.49,
+    "imagen": "https://www.dia.es/product_images/298435/298435_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Cuajada Caprichoso Dia pack 4 x 125 g",
+    "precio": 1.2,
+    "imagen": "https://www.dia.es/product_images/27195/27195_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Cuajada sin azúcar Danone pack 2 x 135 g",
+    "precio": 1.49,
+    "imagen": "https://www.dia.es/product_images/12692/12692_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Gelatina de fresa, limón y multifruta Caprichoso Dia pack 6 x 100 g",
+    "precio": 0.99,
+    "imagen": "https://www.dia.es/product_images/139596/139596_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Gelatina de fresa Caprichoso Dia pack 6 x 100 g",
+    "precio": 0.99,
+    "imagen": "https://www.dia.es/product_images/108518/108518_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Mousse de chocolate con leche Caprichoso Dia pack 4 x 60 g",
+    "precio": 1.1,
+    "imagen": "https://www.dia.es/product_images/46923/46923_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
+  },
+  {
+    "nombre": "Cheesecake Caprichoso Dia pack 2 x 90 g",
+    "precio": 1.75,
+    "imagen": "https://www.dia.es/product_images/208224/208224_ISO_0_ES.jpg?imwidth=176",
+    "supermercado": "Dia",
+    "categoria": "charcutería"
   }
 ]

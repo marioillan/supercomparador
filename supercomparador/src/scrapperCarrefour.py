@@ -39,18 +39,19 @@ async def scrape_carrefour(url):
             productos.append({
                 "nombre": nombre,
                 "precio": precio,
-                "imagen": imagen
+                "imagen": imagen,
+                "supermercado": "carrefour"
             })
 
         await browser.close()
         return productos
 
 if __name__ == "__main__":
-    url_categoria = "https://www.carrefour.es/supermercado/productos-frescos/cat20002/c?offset=24"
+    url_categoria = "https://www.carrefour.es/supermercado/productos-frescos/cat20002/c?offset=216"
     productos = asyncio.run(scrape_carrefour(url_categoria))
 
     # Guardar en archivo JSON
     with open("productos.json", "w", encoding="utf-8") as f:
         json.dump(productos, f, indent=2, ensure_ascii=False)
 
-    print("✅ Datos guardados en productos.json")
+    print("- Datos guardados en productos.json")

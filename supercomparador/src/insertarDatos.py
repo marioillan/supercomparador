@@ -17,20 +17,20 @@ def insertar_producto(producto):
 
     response = requests.post(url, json=producto, headers=headers)
     if response.status_code == 201:
-        print(f"✅ Insertado: {producto['nombre']}")
+        print(f"- Insertado: {producto['nombre']}")
     else:
-        print(f"❌ Error al insertar {producto['nombre']}: {response.status_code}")
+        print(f"* Error al insertar {producto['nombre']}: {response.status_code}")
         print(response.text)
 
 def main():
     try:
-        with open("productos_no_encontrados.json", "r", encoding="utf-8") as f:
+        with open("productos.json", "r", encoding="utf-8") as f:
             productos = json.load(f)
     except Exception as e:
-        print(f"❌ Error al cargar productos_enriquecidos.json: {e}")
+        print(f"* Error al cargar productos_enriquecidos.json: {e}")
         return
 
-    print(f"📤 Insertando {len(productos)} productos en Supabase...\n")
+    print(f"+ Insertando {len(productos)} productos en Supabase...\n")
     for producto in productos:
         datos = {
             "nombre": producto.get("nombre", ""),
@@ -41,7 +41,9 @@ def main():
             "energia_100g": producto.get("energia_100g") or None,
             "grasas_100g": producto.get("grasas_100g") or None,
             "azucares_100g": producto.get("azucares_100g") or None,
-            'imagen': producto.get('image_url') or None
+            "imagen": producto.get("imagen") or None,
+            "supermercado": producto.get("supermercado")or "Dia"
+
         }
 
         insertar_producto(datos)

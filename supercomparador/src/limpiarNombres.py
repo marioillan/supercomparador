@@ -45,12 +45,13 @@ def consultar_open_food_facts(termino):
                 'energia_100g': producto.get('nutriments', {}).get('energy_100g', ''),
                 'grasas_100g': producto.get('nutriments', {}).get('fat_100g', ''),
                 'azucares_100g': producto.get('nutriments', {}).get('sugars_100g', ''),
-                'imagen': producto.get('image_url') or None
+                'imagen': producto.get('image_url') or None,
+                'supermercado': producto.get('supermerado')or None
             }
             cache_resultados[termino] = info
             return info
     except Exception as e:
-        print(f"❌ Error al consultar '{termino}': {e}")
+        print(f"* Error al consultar '{termino}': {e}")
 
     cache_resultados[termino] = {}
     return {}
@@ -60,7 +61,7 @@ def main():
         with open("productos.json", "r", encoding="utf-8") as f:
             productos = json.load(f)
     except Exception as e:
-        print(f"❌ Error al cargar productos.json: {e}")
+        print(f"* Error al cargar productos.json: {e}")
         return
 
     productos_enriquecidos = []
@@ -76,14 +77,14 @@ def main():
         print(f"   🔎 Buscando con primera palabra útil: '{nombre_limpio}'")
 
         if not nombre_limpio:
-            print("   ⚠️ Nombre no válido tras limpiar. Saltando...")
+            print("   * Nombre no válido tras limpiar. Saltando...")
             productos_no_encontrados.append(producto)
             continue
 
         resultado = consultar_open_food_facts(nombre_limpio)
 
         if resultado:
-            print(f"   ✅ Coincidencia: {resultado.get('nombre_of', 'desconocido')}")
+            print(f"   - Coincidencia: {resultado.get('nombre_of', 'desconocido')}")
             producto_actualizado = {
                 **producto,
                 "nombre_limpio": nombre_limpio,
@@ -91,7 +92,7 @@ def main():
             }
             productos_enriquecidos.append(producto_actualizado)
         else:
-            print(f"   ❌ No se encontró información para: '{nombre_limpio}'")
+            print(f"   * No se encontró información para: '{nombre_limpio}'")
             productos_no_encontrados.append(producto)
 
         time.sleep(1.5)
