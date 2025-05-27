@@ -45,12 +45,8 @@ def obtener_folletos_dia():
 
 @app.route("/api/folletos-mas")
 def obtener_folletos_mas():
-    """
-    Scrapea todos los folletos disponibles de Supermercados MAS.
-    Devuelve una lista con la imagen de portada y el enlace al visor.
-    """
-    url = "https://folletos.supermercadosmas.com/indice/"  # Página embebida desde su web principal
-    base_url = ""  # los enlaces son absolutos
+    url = "https://folletos.supermercadosmas.com/indice/"  
+    base_url = "" 
 
     try:
         headers = {"User-Agent": "Mozilla/5.0"}
@@ -59,7 +55,7 @@ def obtener_folletos_mas():
 
         folletos = []
 
-        # Buscar todos los bloques que contienen los folletos
+        #Buscar todos los bloques que contienen los folletos
         bloques = soup.select("div.contenedor-folleto-completo")
 
         for bloque in bloques:
@@ -76,7 +72,7 @@ def obtener_folletos_mas():
                     "enlace_pdf": enlace_pdf
                 })
 
-        # Validación: si no se encontró ninguno
+        #Validación: si no se encontró ninguno
         if not folletos:
             return jsonify({"error": "No se encontraron folletos de Supermercados MAS."}), 404
 

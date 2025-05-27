@@ -96,6 +96,7 @@ function Header() {
         <ul>
           <li><Link to="/supermercados"><p>Supermercados</p></Link></li>
           <li><Link to="/productos"><p>Productos</p></Link></li>
+          <li><Link to="/nutricion"><p>Nutrición</p></Link></li>
           <li><Link to="/catalogos"><p>Catálogos</p></Link></li>
         </ul>
       </nav>

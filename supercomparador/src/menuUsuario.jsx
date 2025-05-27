@@ -16,7 +16,7 @@ function MenuUsuario() {
     if (!usuario) return;
 
     const obtenerDatos = async () => {
-      // Obtener la ciudad actual
+      //Obtener la ciudad actual
       const { data: ciudadData } = await supabase
         .from('usuarios')
         .select('ciudad')
@@ -28,7 +28,7 @@ function MenuUsuario() {
         setNuevaCiudad(ciudadData.ciudad);
       }
 
-      // Obtener productos favoritos del usuario con información relacionada
+      //Obtener productos favoritos del usuario con información relacionada
       const { data: favoritosData, error } = await supabase
         .from('favoritos')
         .select(`

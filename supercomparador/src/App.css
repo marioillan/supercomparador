@@ -6,6 +6,36 @@ main{
   
 }
 
+.home {
+  position: relative;
+  width:50%;
+  height: 50vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homecontenido {
+  position: relative;
+  z-index: 3;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  margin-top: 12rem;
+}
+
+.homecontenido h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.homecontenido p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+
 h2{
 
   color: #fff;

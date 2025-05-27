@@ -25,7 +25,7 @@ function Supermercados() {
 
   // Paso 1: Obtener la ciudad del usuario
   useEffect(() => {
-    console.log('🔄 useEffect usuario ejecutado. Usuario:', usuario);
+    console.log('useEffect usuario ejecutado. Usuario:', usuario);
     const obtenerCiudad = async () => {
       if (usuario?.id) {
         const { data, error } = await supabase
@@ -34,7 +34,7 @@ function Supermercados() {
           .eq('id', usuario.id)
           .single();
 
-        console.log('📌 Ciudad obtenida de Supabase:', data?.ciudad);
+        console.log('Ciudad obtenida de Supabase:', data?.ciudad);
         if (data?.ciudad) {
           setCiudad(data.ciudad);
         }
@@ -52,8 +52,8 @@ function Supermercados() {
       console.log('Ciudad a geocodificar:', ciudad);
       const geocoder = new window.google.maps.Geocoder();
       geocoder.geocode({ address: `${ciudad}, España` }, (resultados, estado) => {
-      console.log('📍 Resultado geocoding:', resultados);
-      console.log('📍 Estado geocoding:', estado);
+      console.log('Resultado geocoding:', resultados);
+      console.log('Estado geocoding:', estado);
         if (estado === 'OK' && resultados.length > 0) {
           const ubicacion = resultados[0].geometry.location;
           setCoordenadas({ lat: ubicacion.lat(), lng: ubicacion.lng() });
